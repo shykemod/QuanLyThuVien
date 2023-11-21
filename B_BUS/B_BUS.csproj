@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Features\**" />
+		<Compile Remove="Utilities\**" />
+		<EmbeddedResource Remove="Features\**" />
+		<EmbeddedResource Remove="Utilities\**" />
+		<None Remove="Features\**" />
+		<None Remove="Utilities\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\A_DAL\A_DAL.csproj" />
+	</ItemGroup>
+
+</Project>
