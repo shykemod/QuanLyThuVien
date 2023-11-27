@@ -11,7 +11,7 @@ namespace C_PRL.qlsach
 
         public MultiSelectComboBox()
         {
-            _listBox = new CheckedListBox 
+            _listBox = new CheckedListBox
             {
                 SelectionMode = SelectionMode.MultiSimple,
                 Location = new System.Drawing.Point(0, 0),
@@ -124,7 +124,7 @@ namespace C_PRL.qlsach
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemTTSach));
             tbBarcode = new TextBox();
-            btnClear = new Button();
+            btnRescan = new Button();
             label1 = new Label();
             label2 = new Label();
             tbName = new TextBox();
@@ -132,6 +132,11 @@ namespace C_PRL.qlsach
             textBox1 = new TextBox();
             label4 = new Label();
             dateTimePicker1 = new DateTimePicker();
+            label5 = new Label();
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
+            label6 = new Label();
+            btnThem = new Button();
             SuspendLayout();
             // 
             // tbBarcode
@@ -140,15 +145,16 @@ namespace C_PRL.qlsach
             tbBarcode.Name = "tbBarcode";
             tbBarcode.Size = new Size(409, 23);
             tbBarcode.TabIndex = 0;
+            tbBarcode.TextChanged += tbBarcode_TextChanged;
             // 
-            // btnClear
+            // btnRescan
             // 
-            btnClear.Location = new Point(513, 12);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(75, 23);
-            btnClear.TabIndex = 1;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
+            btnRescan.Location = new Point(196, 157);
+            btnRescan.Name = "btnRescan";
+            btnRescan.Size = new Size(75, 23);
+            btnRescan.TabIndex = 1;
+            btnRescan.Text = "Rescan";
+            btnRescan.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -207,11 +213,60 @@ namespace C_PRL.qlsach
             dateTimePicker1.Size = new Size(171, 23);
             dateTimePicker1.TabIndex = 9;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(49, 102);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 15);
+            label5.TabIndex = 11;
+            label5.Text = "Tác giả";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(98, 99);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(409, 23);
+            textBox2.TabIndex = 10;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(98, 128);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(409, 23);
+            comboBox1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(44, 131);
+            label6.Name = "label6";
+            label6.Size = new Size(48, 15);
+            label6.TabIndex = 13;
+            label6.Text = "Thể loại";
+            // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(277, 157);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(75, 23);
+            btnThem.TabIndex = 14;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
             // ThemTTSach
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(637, 346);
+            ClientSize = new Size(552, 200);
+            Controls.Add(btnThem);
+            Controls.Add(label6);
+            Controls.Add(comboBox1);
+            Controls.Add(label5);
+            Controls.Add(textBox2);
             Controls.Add(dateTimePicker1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -219,11 +274,12 @@ namespace C_PRL.qlsach
             Controls.Add(label2);
             Controls.Add(tbName);
             Controls.Add(label1);
-            Controls.Add(btnClear);
+            Controls.Add(btnRescan);
             Controls.Add(tbBarcode);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ThemTTSach";
             Text = "Thêm thông tin sách";
+            Load += ThemTTSach_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,7 +287,7 @@ namespace C_PRL.qlsach
         #endregion
 
         private TextBox tbBarcode;
-        private Button btnClear;
+        private Button btnRescan;
         private Label label1;
         private Label label2;
         private TextBox tbName;
@@ -239,5 +295,10 @@ namespace C_PRL.qlsach
         private TextBox textBox1;
         private Label label4;
         private DateTimePicker dateTimePicker1;
+        private Label label5;
+        private TextBox textBox2;
+        private ComboBox comboBox1;
+        private Label label6;
+        private Button btnThem;
     }
 }

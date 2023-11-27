@@ -49,7 +49,7 @@ namespace C_PRL
                 sach.NamXuatBan?.ToString("MM/dd/yyyy"),
                 svc.services.GetTacGiaByID(sach.BarCodeSach),
                 svc.services.GetTheLoaiByID(sach.BarCodeSach),
-                svc.services.getCount(sach.BarCodeSach)
+                svc.services.getCountById(sach.BarCodeSach)
                 );
             }
         }

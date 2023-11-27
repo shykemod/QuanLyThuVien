@@ -84,7 +84,7 @@
             // 
             // btnHide
             // 
-            btnHide.BackgroundImage = Properties.Resources.hide;
+            btnHide.BackgroundImage = Properties.Resources.view1;
             btnHide.BackgroundImageLayout = ImageLayout.Stretch;
             btnHide.Location = new Point(220, 79);
             btnHide.Name = "btnHide";

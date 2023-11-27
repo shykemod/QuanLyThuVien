@@ -47,7 +47,7 @@ namespace A_DAL.Context
         {
             modelBuilder.Entity<ChiTietTheLoai>(entity =>
             {
-                entity.HasKey(e => new { e.IdTheLoai, e.BarCode })
+                entity.HasKey(e => new { e.ViTriKeSach, e.BarCode })
                     .HasName("PK__chiTietT__AA87D46E573B0130");
 
                 entity.HasOne(d => d.BarCodeNavigation)
@@ -58,7 +58,7 @@ namespace A_DAL.Context
 
                 entity.HasOne(d => d.IdTheLoaiNavigation)
                     .WithMany(p => p.ChiTietTheLoais)
-                    .HasForeignKey(d => d.IdTheLoai)
+                    .HasForeignKey(d => d.ViTriKeSach)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__chiTietTh__idThe__2E1BDC42");
             });
@@ -183,10 +183,10 @@ namespace A_DAL.Context
 
             modelBuilder.Entity<TheLoaiSach>(entity =>
             {
-                entity.HasKey(e => e.IdTheLoai)
+                entity.HasKey(e => e.ViTriKeSach)
                     .HasName("PK__TheLoaiS__890D7EC86A4FAD18");
 
-                entity.Property(e => e.IdTheLoai).ValueGeneratedNever();
+                entity.Property(e => e.ViTriKeSach).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<TheThuVien>(entity =>

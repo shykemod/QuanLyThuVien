@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A_DAL.DomainClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,6 @@ namespace A_DAL.IRepositories
     public interface ITheLoai
     {
         public string? GetTheLoaiByID(string id);
+        public List<TheLoaiSach> GetAllTheLoai();
     }
 }

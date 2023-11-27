@@ -15,15 +15,14 @@ namespace A_DAL.DomainClass
         }
 
         [Key]
-        [Column("idTheLoai")]
-        public Guid IdTheLoai { get; set; }
-        [Column("tenTheLoai")]
-        [StringLength(50)]
-        public string? TenTheLoai { get; set; }
         [Column("viTriKeSach")]
         [StringLength(10)]
         [Unicode(false)]
         public string? ViTriKeSach { get; set; }
+        [Column("tenTheLoai")]
+        [StringLength(50)]
+        public string? TenTheLoai { get; set; }
+        
 
         [InverseProperty("IdTheLoaiNavigation")]
         public virtual ICollection<ChiTietTheLoai> ChiTietTheLoais { get; set; }

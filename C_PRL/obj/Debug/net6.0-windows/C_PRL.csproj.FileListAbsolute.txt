@@ -322,3 +322,4 @@ D:\Github\QuanLyThuVien\C_PRL\obj\Debug\net6.0-windows\C_PRL.genruntimeconfig.ca
 D:\Github\QuanLyThuVien\C_PRL\obj\Debug\net6.0-windows\ref\C_PRL.dll
 D:\Github\QuanLyThuVien\C_PRL\obj\Debug\net6.0-windows\C_PRL.Properties.Resources.resources
 D:\Github\QuanLyThuVien\C_PRL\obj\Debug\net6.0-windows\C_PRL.qlsach.ThemTTSach.resources
+D:\Github\QuanLyThuVien\C_PRL\bin\Debug\net6.0-windows\USB-Barcode-Scanner.dll

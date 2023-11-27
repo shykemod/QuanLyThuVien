@@ -9,7 +9,8 @@
       "C_PRL/1.0.0": {
         "dependencies": {
           "B_BUS": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "6.0.13"
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.13",
+          "USB-Barcode-Scanner": "1.0.0.0"
         },
         "runtime": {
           "C_PRL.dll": {}
@@ -423,6 +424,14 @@
         "runtime": {
           "B_BUS.dll": {}
         }
+      },
+      "USB-Barcode-Scanner/1.0.0.0": {
+        "runtime": {
+          "USB-Barcode-Scanner.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -740,6 +749,11 @@
     },
     "B_BUS/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "USB-Barcode-Scanner/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

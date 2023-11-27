@@ -38,7 +38,7 @@ namespace C_PRL
             else if (StateLogin == true)
             {
                 Role = true;
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form qltv = new FormQLSach();
                 qltv.Show();
                 this.Hide();
@@ -56,11 +56,11 @@ namespace C_PRL
             tbPassword.UseSystemPasswordChar = !tbPassword.UseSystemPasswordChar;
             if (tbPassword.UseSystemPasswordChar)
             {
-                btnHide.BackgroundImage = Properties.Resources.hide;
+                btnHide.BackgroundImage = Properties.Resources.hide1;
             }
             else
             {
-                btnHide.BackgroundImage = Properties.Resources.view;
+                btnHide.BackgroundImage = Properties.Resources.view1;
             }
         }
     }

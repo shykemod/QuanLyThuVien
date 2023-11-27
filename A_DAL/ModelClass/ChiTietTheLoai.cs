@@ -10,16 +10,15 @@ namespace A_DAL.DomainClass
     public partial class ChiTietTheLoai
     {
         [Key]
-        [Column("idTheLoai")]
-        public Guid IdTheLoai { get; set; }
+        [Column("viTriKeSach")]
+        [StringLength(10)]
+        [Unicode(false)]
+        public string? ViTriKeSach { get; set; }
         [Key]
         [Column("barCode")]
         [StringLength(13)]
         [Unicode(false)]
         public string BarCode { get; set; } = null!;
-        [Column("moTa")]
-        [StringLength(150)]
-        public string? MoTa { get; set; }
 
         [ForeignKey("BarCode")]
         [InverseProperty("ChiTietTheLoais")]

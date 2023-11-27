@@ -20,13 +20,14 @@ namespace B_BUS
         public static ITheLoai TheLoaiRes = new TheLoaiRes(); //Khởi tạo biến thể loại repos
 
 
-        public bool? Login(string username, string password) => UserRes.Login(username, password);
+        public bool? Login(string username, string password) => UserRes.Login(username, password); // Đăng nh
         public List<Sach?> GetAllSach() => SachRes.getAll(); //Lấy danh sách sách
-        public int getCount(string Id) => SachRes.getCount(Id); //Lấy số lượng sách
+        public int getCountById(string Id) => SachRes.getCountById(Id); //Lấy số lượng sách theo barcode
         public List<SachChiTiet?> GetAllSachCT(string Id) => SachCTRes.getAll(Id); //Lấy danh sách sách
 
         public string? GetTacGiaByID(string id) => TacGiaRes.GetTacGiaByID(id); //Lấy chuỗi tên tác giả của sách theo mã sách
         public string? GetTheLoaiByID(string id) => TheLoaiRes.GetTheLoaiByID(id); //Lấy chuỗi thể loại của sách theo mã sách
+        public List<TheLoaiSach> GetAllTheLoai() => TheLoaiRes.GetAllTheLoai(); //Lấy danh sách thể loại
     }
 
 }

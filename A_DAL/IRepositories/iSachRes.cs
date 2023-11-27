@@ -12,6 +12,6 @@ namespace A_DAL.IRepositories
     public interface iSachRes
     {
         List<Sach?> getAll();
-        int getCount(string Id);
+        int getCountById(string Id);
     }
 }
