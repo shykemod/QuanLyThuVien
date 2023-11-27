@@ -20,7 +20,6 @@ namespace C_PRL
         public QuanLySachChiTiet(string id)
         {
             InitializeComponent();
-            svc.services = new Services();
             IdSach = id;
         }
 

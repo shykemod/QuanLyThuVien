@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A_DAL.DomainClass;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace A_DAL.IRepositories
 {
     public interface iSachRes
     {
         List<Sach?> getAll();
+        int getCount(string Id);
     }
 }

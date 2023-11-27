@@ -14,5 +14,10 @@ namespace A_DAL.Repositories
         {
             return dbConnection._dbDuAn.Saches.ToList();
         }
+
+        public int getCount(string Id)
+        {
+            return dbConnection._dbDuAn.SachChiTiets.Where(sct => sct.BarCodeSach.Equals(Id)).Count();
+        }
     }
 }

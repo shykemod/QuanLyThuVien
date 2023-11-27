@@ -12,10 +12,13 @@ namespace B_BUS
 {
     public interface IServices
     {
-        public List<Sach?> GetAllSach();
-        public List<SachChiTiet?> GetAllSachCT(string Id);
-        public string? GetTacGiaByID(string id);
-        public string? GetTheLoaiByID(string id);
+
+        public bool? Login(string username, string password); //Đăng nhập
+        public List<Sach?> GetAllSach(); //Lấy list sách
+        public int getCount(string Id);
+        public List<SachChiTiet?> GetAllSachCT(string Id); //Lấy list sách chi tiết
+        public string? GetTacGiaByID(string id); //Lấy Tác giả sách
+        public string? GetTheLoaiByID(string id); //Lấy thể loại sách
 
 
     }

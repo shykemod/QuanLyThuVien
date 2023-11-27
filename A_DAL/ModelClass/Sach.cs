@@ -24,8 +24,6 @@ namespace A_DAL.DomainClass
         [Column("tenSach")]
         [StringLength(100)]
         public string? TenSach { get; set; }
-        [Column("soLuong")]
-        public int? SoLuong { get; set; }
         [Column("giaTien", TypeName = "money")]
         public decimal? GiaTien { get; set; }
         [Column("namXuatBan", TypeName = "date")]

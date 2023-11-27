@@ -22,13 +22,16 @@ namespace C_PRL
         public FormQLSach()
         {
             InitializeComponent();
-            svc.services = new Services();
         }
 
 
         private void QuanLySach_Load(object sender, EventArgs e)
         {
             ShowData("", 0);
+            if (!LoginForm.Role)
+            {
+                btnThem.Hide();
+            }
         }
 
 
@@ -41,11 +44,11 @@ namespace C_PRL
                 i.ToString(),
                 sach.BarCodeSach,
                 sach.TenSach,
-                sach.SoLuong,
                 sach.GiaTien,
                 sach.NamXuatBan?.ToString("MM/dd/yyyy"),
                 svc.services.GetTacGiaByID(sach.BarCodeSach),
-                svc.services.GetTheLoaiByID(sach.BarCodeSach)
+                svc.services.GetTheLoaiByID(sach.BarCodeSach),
+                svc.services.getCount(sach.BarCodeSach)
                 );
             }
         }

@@ -35,11 +35,14 @@
             stt = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
             Ten = new DataGridViewTextBoxColumn();
-            Num = new DataGridViewTextBoxColumn();
             Gia = new DataGridViewTextBoxColumn();
             NamXuatBan = new DataGridViewTextBoxColumn();
             TacGia = new DataGridViewTextBoxColumn();
             TheLoai = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
+            textBox1 = new TextBox();
+            btnThem = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +63,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { stt, ID, Ten, Num, Gia, NamXuatBan, TacGia, TheLoai });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { stt, ID, Ten, Gia, NamXuatBan, TacGia, TheLoai, SoLuong });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -101,13 +104,6 @@
             Ten.Name = "Ten";
             Ten.ReadOnly = true;
             // 
-            // Num
-            // 
-            Num.FillWeight = 40F;
-            Num.HeaderText = "Số lượng";
-            Num.Name = "Num";
-            Num.ReadOnly = true;
-            // 
             // Gia
             // 
             Gia.FillWeight = 60F;
@@ -134,12 +130,47 @@
             TheLoai.Name = "TheLoai";
             TheLoai.ReadOnly = true;
             // 
+            // SoLuong
+            // 
+            SoLuong.FillWeight = 50F;
+            SoLuong.HeaderText = "Số lượng sách";
+            SoLuong.Name = "SoLuong";
+            SoLuong.ReadOnly = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(855, 97);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(226, 23);
+            textBox1.TabIndex = 1;
+            // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(12, 96);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(127, 23);
+            btnThem.TabIndex = 2;
+            btnThem.Text = "Thêm thông tin sách";
+            btnThem.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(793, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(62, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Tìm kiếm: ";
+            // 
             // FormQLSach
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1093, 392);
+            Controls.Add(label1);
+            Controls.Add(btnThem);
+            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -150,6 +181,7 @@
             Load += QuanLySach_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -158,10 +190,13 @@
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
-        private DataGridViewTextBoxColumn Num;
         private DataGridViewTextBoxColumn Gia;
         private DataGridViewTextBoxColumn NamXuatBan;
         private DataGridViewTextBoxColumn TacGia;
         private DataGridViewTextBoxColumn TheLoai;
+        private DataGridViewTextBoxColumn SoLuong;
+        private TextBox textBox1;
+        private Button btnThem;
+        private Label label1;
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {}
+    "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
+    "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\obj\\",
+        "projectPath": "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\META COM\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\QuanLyThuVien\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\share\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\META COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -82,24 +82,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {
+    "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\B_BUS\\B_BUS.csproj",
+        "projectUniqueName": "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
-        "projectPath": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\B_BUS\\B_BUS.csproj",
-        "packagesPath": "C:\\Users\\d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\B_BUS\\obj\\",
+        "projectPath": "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj",
+        "packagesPath": "C:\\Users\\META COM\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\QuanLyThuVien\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\share\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\META COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,8 +115,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
-                "projectPath": "C:\\Users\\d\\Desktop\\DuAn1\\QuanLyThuVien\\A_DAL\\A_DAL.csproj"
+              "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj"
               }
             }
           }
@@ -146,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
