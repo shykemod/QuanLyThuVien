@@ -15,17 +15,12 @@ namespace A_DAL.DomainClass
         [Unicode(false)]
         public string BarCodeSach { get; set; } = null!;
         [Key]
-        [Column("idTacGia")]
-        public Guid IdTacGia { get; set; }
-        [Column("moTa")]
-        [StringLength(150)]
-        public string? MoTa { get; set; }
+        [Column("hoTen")]
+        [StringLength(50)]
+        public string Name { get; set; }
 
         [ForeignKey("BarCodeSach")]
         [InverseProperty("TacGiaSaches")]
         public virtual Sach BarCodeSachNavigation { get; set; } = null!;
-        [ForeignKey("IdTacGia")]
-        [InverseProperty("TacGiaSaches")]
-        public virtual TacGium IdTacGiaNavigation { get; set; } = null!;
     }
 }

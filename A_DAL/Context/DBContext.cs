@@ -28,7 +28,6 @@ namespace A_DAL.Context
         public virtual DbSet<Sach> Saches { get; set; } = null!;
         public virtual DbSet<SachChiTiet> SachChiTiets { get; set; } = null!;
         public virtual DbSet<TacGiaSach> TacGiaSaches { get; set; } = null!;
-        public virtual DbSet<TacGium> TacGia { get; set; } = null!;
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; } = null!;
         public virtual DbSet<TheLoaiSach> TheLoaiSaches { get; set; } = null!;
         public virtual DbSet<TheThuVien> TheThuViens { get; set; } = null!;
@@ -159,7 +158,7 @@ namespace A_DAL.Context
 
             modelBuilder.Entity<TacGiaSach>(entity =>
             {
-                entity.HasKey(e => new { e.BarCodeSach, e.IdTacGia })
+                entity.HasKey(e => new { e.BarCodeSach, e.Name })
                     .HasName("PK__TacGiaSa__6D1AE3838CD39212");
 
                 entity.HasOne(d => d.BarCodeSachNavigation)
@@ -167,20 +166,6 @@ namespace A_DAL.Context
                     .HasForeignKey(d => d.BarCodeSach)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TacGiaSac__barCo__286302EC");
-
-                entity.HasOne(d => d.IdTacGiaNavigation)
-                    .WithMany(p => p.TacGiaSaches)
-                    .HasForeignKey(d => d.IdTacGia)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TacGiaSac__idTac__29572725");
-            });
-
-            modelBuilder.Entity<TacGium>(entity =>
-            {
-                entity.HasKey(e => e.IdTacGia)
-                    .HasName("PK__TacGia__0A9953D2A883EF85");
-
-                entity.Property(e => e.IdTacGia).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<TaiKhoan>(entity =>

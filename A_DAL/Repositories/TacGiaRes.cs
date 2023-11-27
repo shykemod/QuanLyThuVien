@@ -13,10 +13,9 @@ namespace A_DAL.Repositories
         public string? GetTacGiaByID(string id)
         {
 
-            List<String> tacGiaList = (from TG in dbConnection._dbDuAn.TacGia
-                                       join TGS in dbConnection._dbDuAn.TacGiaSaches on TG.IdTacGia equals TGS.IdTacGia
-                                       where TGS.BarCodeSach == id
-                                       select TG.HoTen).ToList();
+            List<String> tacGiaList = (from TG in dbConnection._dbDuAn.TacGiaSaches
+                                       where TG.BarCodeSach == id
+                                       select TG.Name).ToList();
 
             return String.Join(", ", tacGiaList);
         }

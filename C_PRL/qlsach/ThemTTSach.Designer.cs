@@ -1,6 +1,99 @@
-﻿
+﻿using System;
+using System.Windows.Forms;
+using System.Collections.Generic;
+
 namespace C_PRL.qlsach
 {
+    public class MultiSelectComboBox : ComboBox
+    {
+        private CheckedListBox _listBox;
+        private bool _isDroppedDown;
+
+        public MultiSelectComboBox()
+        {
+            _listBox = new CheckedListBox 
+            {
+                SelectionMode = SelectionMode.MultiSimple,
+                Location = new System.Drawing.Point(0, 0),
+                Size = new System.Drawing.Size(100, 100),
+                BorderStyle = BorderStyle.FixedSingle
+            };
+            _listBox.Visible = false;
+            _listBox.ItemCheck += (s, e) => OnItemCheckChanged(s, e);
+        }
+
+        public new bool DroppedDown
+        {
+            get { return _isDroppedDown; }
+            set
+            {
+                _isDroppedDown = value;
+                _listBox.Visible = value;
+                if (_isDroppedDown)
+                {
+                    UpdateListBoxLocation();
+                    _listBox.BringToFront();
+                    _listBox.Focus();
+                }
+            }
+        }
+
+        protected override void OnDropDown(EventArgs e)
+        {
+            base.OnDropDown(e);
+            DroppedDown = true;
+        }
+
+        protected void OnItemCheckChanged(object sender, ItemCheckEventArgs e)
+        {
+            string displayText = "";
+            foreach (var item in _listBox.CheckedItems)
+            {
+                displayText += item.ToString() + ", ";
+            }
+
+            if (displayText.Length > 2)
+            {
+                displayText = displayText.Substring(0, displayText.Length - 2);
+            }
+
+            this.Text = displayText;
+        }
+
+        private void UpdateListBoxLocation()
+        {
+            _listBox.Location = this.PointToScreen(new System.Drawing.Point(0, this.Height));
+            _listBox.Width = this.Width;
+            _listBox.Height = 100; // Set this to the desired height
+        }
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            if (!_listBox.ContainsFocus)
+            {
+                DroppedDown = false;
+            }
+        }
+
+        public void SetItems(List<string> items)
+        {
+            foreach (var item in items)
+            {
+                _listBox.Items.Add(item, false);
+            }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _listBox.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+    }
+
     partial class ThemTTSach
     {
         /// <summary>
@@ -38,7 +131,6 @@ namespace C_PRL.qlsach
             label3 = new Label();
             textBox1 = new TextBox();
             label4 = new Label();
-
             dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 

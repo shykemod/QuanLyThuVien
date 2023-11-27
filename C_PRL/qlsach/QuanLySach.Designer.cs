@@ -152,6 +152,7 @@
             btnThem.TabIndex = 2;
             btnThem.Text = "Thêm thông tin sách";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // label1
             // 

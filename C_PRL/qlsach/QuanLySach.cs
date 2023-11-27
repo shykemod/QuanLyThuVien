@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using A_DAL.DomainClass;
 using System.Globalization;
+using C_PRL.qlsach;
 
 namespace C_PRL
 {
@@ -68,5 +69,10 @@ namespace C_PRL
             }
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Form AddTTSach = new ThemTTSach();
+            AddTTSach.ShowDialog();
+        }
     }
 }
