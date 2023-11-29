@@ -11,5 +11,6 @@ namespace A_DAL.IRepositories
     {
         public string? GetTheLoaiByID(string id);
         public List<TheLoaiSach> GetAllTheLoai();
+        public bool Add(string barcode, string ViTri);
     }
 }

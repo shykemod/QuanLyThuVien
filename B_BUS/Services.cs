@@ -25,9 +25,12 @@ namespace B_BUS
         public int getCountById(string Id) => SachRes.getCountById(Id); //Lấy số lượng sách theo barcode
         public List<SachChiTiet?> GetAllSachCT(string Id) => SachCTRes.getAll(Id); //Lấy danh sách sách
 
+        public bool Add_Sach(Sach sach, string TacGia, string Vitri) => SachRes.Add(sach, TacGia, Vitri);  //Thêm thông tin sách
+
         public string? GetTacGiaByID(string id) => TacGiaRes.GetTacGiaByID(id); //Lấy chuỗi tên tác giả của sách theo mã sách
         public string? GetTheLoaiByID(string id) => TheLoaiRes.GetTheLoaiByID(id); //Lấy chuỗi thể loại của sách theo mã sách
         public List<TheLoaiSach> GetAllTheLoai() => TheLoaiRes.GetAllTheLoai(); //Lấy danh sách thể loại
+
     }
 
 }

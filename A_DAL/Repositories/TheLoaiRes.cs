@@ -2,6 +2,7 @@
 using A_DAL.IRepositories;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,23 @@ namespace A_DAL.Repositories
         public List<TheLoaiSach> GetAllTheLoai()
         {
             return dbConnection._dbDuAn.TheLoaiSaches.ToList();
+        }
+
+        public bool Add(string barcode, string ViTri)
+        {
+            try
+            {
+                var tmp = new ChiTietTheLoai();
+                tmp.ViTriKeSach = ViTri;
+                tmp.BarCode = barcode;
+                dbConnection._dbDuAn.ChiTietTheLoais.Add(tmp);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

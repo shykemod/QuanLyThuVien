@@ -4,95 +4,6 @@ using System.Collections.Generic;
 
 namespace C_PRL.qlsach
 {
-    public class MultiSelectComboBox : ComboBox
-    {
-        private CheckedListBox _listBox;
-        private bool _isDroppedDown;
-
-        public MultiSelectComboBox()
-        {
-            _listBox = new CheckedListBox
-            {
-                SelectionMode = SelectionMode.MultiSimple,
-                Location = new System.Drawing.Point(0, 0),
-                Size = new System.Drawing.Size(100, 100),
-                BorderStyle = BorderStyle.FixedSingle
-            };
-            _listBox.Visible = false;
-            _listBox.ItemCheck += (s, e) => OnItemCheckChanged(s, e);
-        }
-
-        public new bool DroppedDown
-        {
-            get { return _isDroppedDown; }
-            set
-            {
-                _isDroppedDown = value;
-                _listBox.Visible = value;
-                if (_isDroppedDown)
-                {
-                    UpdateListBoxLocation();
-                    _listBox.BringToFront();
-                    _listBox.Focus();
-                }
-            }
-        }
-
-        protected override void OnDropDown(EventArgs e)
-        {
-            base.OnDropDown(e);
-            DroppedDown = true;
-        }
-
-        protected void OnItemCheckChanged(object sender, ItemCheckEventArgs e)
-        {
-            string displayText = "";
-            foreach (var item in _listBox.CheckedItems)
-            {
-                displayText += item.ToString() + ", ";
-            }
-
-            if (displayText.Length > 2)
-            {
-                displayText = displayText.Substring(0, displayText.Length - 2);
-            }
-
-            this.Text = displayText;
-        }
-
-        private void UpdateListBoxLocation()
-        {
-            _listBox.Location = this.PointToScreen(new System.Drawing.Point(0, this.Height));
-            _listBox.Width = this.Width;
-            _listBox.Height = 100; // Set this to the desired height
-        }
-
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            if (!_listBox.ContainsFocus)
-            {
-                DroppedDown = false;
-            }
-        }
-
-        public void SetItems(List<string> items)
-        {
-            foreach (var item in items)
-            {
-                _listBox.Items.Add(item, false);
-            }
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                _listBox.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-    }
 
     partial class ThemTTSach
     {
@@ -129,12 +40,12 @@ namespace C_PRL.qlsach
             label2 = new Label();
             tbName = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            tbGia = new TextBox();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            tbNXB = new DateTimePicker();
             label5 = new Label();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            tbTacgGia = new TextBox();
+            cbbViTri = new ComboBox();
             label6 = new Label();
             btnThem = new Button();
             SuspendLayout();
@@ -142,6 +53,7 @@ namespace C_PRL.qlsach
             // tbBarcode
             // 
             tbBarcode.Location = new Point(98, 12);
+            tbBarcode.MaxLength = 13;
             tbBarcode.Name = "tbBarcode";
             tbBarcode.Size = new Size(409, 23);
             tbBarcode.TabIndex = 0;
@@ -177,6 +89,7 @@ namespace C_PRL.qlsach
             // tbName
             // 
             tbName.Location = new Point(98, 41);
+            tbName.MaxLength = 50;
             tbName.Name = "tbName";
             tbName.Size = new Size(409, 23);
             tbName.TabIndex = 3;
@@ -190,12 +103,13 @@ namespace C_PRL.qlsach
             label3.TabIndex = 6;
             label3.Text = "Giá";
             // 
-            // textBox1
+            // tbGia
             // 
-            textBox1.Location = new Point(98, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(118, 23);
-            textBox1.TabIndex = 5;
+            tbGia.Location = new Point(98, 70);
+            tbGia.MaxLength = 12;
+            tbGia.Name = "tbGia";
+            tbGia.Size = new Size(118, 23);
+            tbGia.TabIndex = 5;
             // 
             // label4
             // 
@@ -206,12 +120,17 @@ namespace C_PRL.qlsach
             label4.TabIndex = 8;
             label4.Text = "Ngày xuất bản";
             // 
-            // dateTimePicker1
+            // tbNXB
             // 
-            dateTimePicker1.Location = new Point(336, 70);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(171, 23);
-            dateTimePicker1.TabIndex = 9;
+            tbNXB.CustomFormat = "dd/MM/yyyy";
+            tbNXB.Format = DateTimePickerFormat.Custom;
+            tbNXB.Location = new Point(336, 70);
+            tbNXB.MaxDate = new DateTime(2023, 11, 29, 0, 0, 0, 0);
+            tbNXB.MinDate = new DateTime(1800, 1, 1, 0, 0, 0, 0);
+            tbNXB.Name = "tbNXB";
+            tbNXB.Size = new Size(171, 23);
+            tbNXB.TabIndex = 9;
+            tbNXB.Value = new DateTime(2023, 11, 29, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -222,30 +141,31 @@ namespace C_PRL.qlsach
             label5.TabIndex = 11;
             label5.Text = "Tác giả";
             // 
-            // textBox2
+            // tbTacgGia
             // 
-            textBox2.Location = new Point(98, 99);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(409, 23);
-            textBox2.TabIndex = 10;
+            tbTacgGia.Location = new Point(98, 99);
+            tbTacgGia.MaxLength = 256;
+            tbTacgGia.Name = "tbTacgGia";
+            tbTacgGia.Size = new Size(409, 23);
+            tbTacgGia.TabIndex = 10;
             // 
-            // comboBox1
+            // cbbViTri
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(98, 128);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(409, 23);
-            comboBox1.TabIndex = 12;
+            cbbViTri.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbViTri.FormattingEnabled = true;
+            cbbViTri.Location = new Point(98, 128);
+            cbbViTri.Name = "cbbViTri";
+            cbbViTri.Size = new Size(409, 23);
+            cbbViTri.TabIndex = 12;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(44, 131);
+            label6.Location = new Point(61, 131);
             label6.Name = "label6";
-            label6.Size = new Size(48, 15);
+            label6.Size = new Size(31, 15);
             label6.TabIndex = 13;
-            label6.Text = "Thể loại";
+            label6.Text = "Vị trí";
             // 
             // btnThem
             // 
@@ -264,19 +184,21 @@ namespace C_PRL.qlsach
             ClientSize = new Size(552, 200);
             Controls.Add(btnThem);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
+            Controls.Add(cbbViTri);
             Controls.Add(label5);
-            Controls.Add(textBox2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(tbTacgGia);
+            Controls.Add(tbNXB);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(tbGia);
             Controls.Add(label2);
             Controls.Add(tbName);
             Controls.Add(label1);
             Controls.Add(btnRescan);
             Controls.Add(tbBarcode);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ThemTTSach";
             Text = "Thêm thông tin sách";
             Load += ThemTTSach_Load;
@@ -292,12 +214,12 @@ namespace C_PRL.qlsach
         private Label label2;
         private TextBox tbName;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox tbGia;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker tbNXB;
         private Label label5;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
+        private TextBox tbTacgGia;
+        private ComboBox cbbViTri;
         private Label label6;
         private Button btnThem;
     }

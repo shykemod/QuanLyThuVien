@@ -19,5 +19,7 @@ namespace B_BUS
         public string? GetTacGiaByID(string id); //Lấy Tác giả sách
         public string? GetTheLoaiByID(string id); //Lấy thể loại sách
         public List<TheLoaiSach> GetAllTheLoai(); //Lấy danh sách thể loại
+
+        public bool Add_Sach(Sach sach, string TacGia, string Vitri); //Thêm thông tin sách
     }
 }

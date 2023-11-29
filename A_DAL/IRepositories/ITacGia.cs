@@ -9,5 +9,7 @@ namespace A_DAL.IRepositories
     public interface ITacGia
     {
         public string? GetTacGiaByID(string id);
+        public bool Add(string barcode, string TacGia);
     }
+
 }

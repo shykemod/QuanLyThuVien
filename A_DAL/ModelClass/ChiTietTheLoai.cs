@@ -20,10 +20,10 @@ namespace A_DAL.DomainClass
         [Unicode(false)]
         public string BarCode { get; set; } = null!;
 
-        [ForeignKey("BarCode")]
+        [ForeignKey("barCode")]
         [InverseProperty("ChiTietTheLoais")]
         public virtual Sach BarCodeNavigation { get; set; } = null!;
-        [ForeignKey("IdTheLoai")]
+        [ForeignKey("viTriKeSach")]
         [InverseProperty("ChiTietTheLoais")]
         public virtual TheLoaiSach IdTheLoaiNavigation { get; set; } = null!;
     }

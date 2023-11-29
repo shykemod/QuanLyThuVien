@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {}
+    "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {}
   },
   "projects": {
-    "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
+    "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "D:\\Github\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\META COM\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\QuanLyThuVien\\A_DAL\\obj\\",
+        "projectPath": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\d\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VisualStudio\\share\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\META COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\d\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

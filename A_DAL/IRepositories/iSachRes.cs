@@ -13,5 +13,6 @@ namespace A_DAL.IRepositories
     {
         List<Sach?> getAll();
         int getCountById(string Id);
+        public bool Add(Sach sach, string TacGia, string Vitri);
     }
 }

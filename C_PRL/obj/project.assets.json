@@ -2049,23 +2049,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\META COM\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\d\\.nuget\\packages\\": {},
+    "D:\\VisualStudio\\share\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\QuanLyThuVien\\C_PRL\\C_PRL.csproj",
+      "projectUniqueName": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\C_PRL\\C_PRL.csproj",
       "projectName": "C_PRL",
-      "projectPath": "D:\\Github\\QuanLyThuVien\\C_PRL\\C_PRL.csproj",
-      "packagesPath": "C:\\Users\\META COM\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\QuanLyThuVien\\C_PRL\\obj\\",
+      "projectPath": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\C_PRL\\C_PRL.csproj",
+      "packagesPath": "C:\\Users\\d\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\C_PRL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\VisualStudio\\share\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\META COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\d\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2081,8 +2081,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {
-              "projectPath": "D:\\Github\\QuanLyThuVien\\B_BUS\\B_BUS.csproj"
+            "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\B_BUS\\B_BUS.csproj": {
+              "projectPath": "C:\\Users\\d\\Source\\Repos\\QuanLyThuVien\\B_BUS\\B_BUS.csproj"
             }
           }
         }
@@ -2123,7 +2123,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -46,7 +46,7 @@ namespace C_PRL
                 sach.BarCodeSach,
                 sach.TenSach,
                 sach.GiaTien,
-                sach.NamXuatBan?.ToString("MM/dd/yyyy"),
+                sach.NamXuatBan?.ToString("dd/MM/yyyy"),
                 svc.services.GetTacGiaByID(sach.BarCodeSach),
                 svc.services.GetTheLoaiByID(sach.BarCodeSach),
                 svc.services.getCountById(sach.BarCodeSach)

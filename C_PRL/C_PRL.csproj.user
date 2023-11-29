@@ -11,7 +11,7 @@
     <Compile Update="qlsach\ThemTTSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="QuanLySachChiTiet.cs">
+    <Compile Update="qlsach\QuanLySachChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
